@@ -11,9 +11,11 @@ To use the function, call 'is_similar(first, second, ratio)' and pass in the two
 Here is an example of how to use the function:
 
   first = ['resarch data']
+  
   second = ['4TU.centre for Research Data', 'Figshare']
 
   result = [s for f in first for s in second if is_similar(f,s, 0.7)]
+  
   print(result)
   
 This will print '['4TU.centre for Research Data']', as it is the only element in 'second' that has a similarity ratio above 0.7 with the first element in 'first'.
