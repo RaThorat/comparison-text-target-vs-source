@@ -18,7 +18,7 @@ You can also set the thresh parameter to customize the minimum matching ratio re
 
 # Notes
 
-The fuzzywuzzy library uses a variety of string matching algorithms to determine the similarity between two strings. You can read more about how it works [here](https://github.com/seatgeek/fuzzywuzzy#fuzz-functions)
+The fuzzywuzzy library uses a variety of string matching algorithms to determine the similarity between two strings. You can read more about how it works [here](https://github.com/seatgeek/thefuzz)
 
 # 3. Fuzzy String Matching
 
@@ -30,6 +30,6 @@ To use the string matching script, make sure you have the required libraries ins
 
 # Notes
 
-The fuzzywuzzy library uses a variety of string matching algorithms to determine the similarity between two strings. In this case, the token_set_ratio method is used, which returns a ratio of the number of tokens in the intersection of the sets of tokens formed from the strings to the number of tokens in the union of the sets of tokens formed from the strings. You can read more about the different matching methods available in fuzzywuzzy [here](https://github.com/seatgeek/fuzzywuzzy#fuzz-functions).
+The fuzzywuzzy library uses a variety of string matching algorithms to determine the similarity between two strings. In this case, the token_set_ratio method is used, which returns a ratio of the number of tokens in the intersection of the sets of tokens formed from the strings to the number of tokens in the union of the sets of tokens formed from the strings. You can read more about the different matching methods available in fuzzywuzzy [here](https://github.com/seatgeek/thefuzz).
 
 The script also includes a function, find_alpha(), that removes non-alphabetic characters from a string. This function is used to clean the data in the Name column of dframe1 before performing the matching.
