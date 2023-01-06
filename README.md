@@ -18,4 +18,18 @@ You can also set the thresh parameter to customize the minimum matching ratio re
 
 # Notes
 
-The fuzzywuzzy library uses a variety of string matching algorithms to determine the similarity between two strings. You can read more about how it works https://github.com/seatgeek/fuzzywuzzy
+The fuzzywuzzy library uses a variety of string matching algorithms to determine the similarity between two strings. You can read more about how it works [here](https://github.com/seatgeek/fuzzywuzzy#fuzz-functions)
+
+# 3. Fuzzy String Matching
+
+This script uses the pandas and fuzzywuzzy libraries to perform fuzzy string matching between two Excel files (text1.xlsx and text2.xlsx). The script compares the data in the Name column of each dataframe and returns the closest match for each element in the first dataframe according to a customizable threshold value (default is 80).
+
+# Usage
+
+To use the string matching script, make sure you have the required libraries installed and that you have two Excel files (text1.xlsx and text2.xlsx) in the same directory as the script. Then, run the script to perform the matching and output the results.
+
+# Notes
+
+The fuzzywuzzy library uses a variety of string matching algorithms to determine the similarity between two strings. In this case, the token_set_ratio method is used, which returns a ratio of the number of tokens in the intersection of the sets of tokens formed from the strings to the number of tokens in the union of the sets of tokens formed from the strings. You can read more about the different matching methods available in fuzzywuzzy [here](https://github.com/seatgeek/fuzzywuzzy#fuzz-functions).
+
+The script also includes a function, find_alpha(), that removes non-alphabetic characters from a string. This function is used to clean the data in the Name column of dframe1 before performing the matching.
