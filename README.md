@@ -7,18 +7,22 @@ This script contains a function is_similar that compares two sequences and retur
 # Usage
 To use the function, call 'is_similar(first, second, ratio)' and pass in the two sequences to be compared as the first and second arguments, and the desired ratio as the third argument. The function will return 'True' if the similarity ratio of the two sequences is above the given ratio, and 'False' otherwise.
 
-# Example
-Here is an example of how to use the function:
 
-  first = ['resarch data']
+# Fuzzy Spell Checker
+This script provides a simple spell checking function using the fuzzywuzzy library and numpy. The function, correctspell(), takes in a word and a list of correct spellings, and returns the closest match in the list according to a customizable threshold value (default is 70).
+
+# Requirements
   
-  second = ['4TU.centre for Research Data', 'Figshare']
-
-  result = [s for f in first for s in second if is_similar(f,s, 0.7)]
+  fuzzywuzzy
   
-  print(result)
-  
-This will print '['4TU.centre for Research Data']', as it is the only element in 'second' that has a similarity ratio above 0.7 with the first element in 'first'.
+  numpy
 
+# Usage
 
+To use the spell checker, simply import the function and call it on the word you want to check. 
 
+You can also set the thresh parameter to customize the minimum matching ratio required for a correction to be returned. If no match is found above the threshold, the function will return None.
+
+# Notes
+
+The fuzzywuzzy library uses a variety of string matching algorithms to determine the similarity between two strings. You can read more about how it works https://github.com/seatgeek/fuzzywuzzy
